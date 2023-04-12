@@ -72,7 +72,7 @@ const Delete_Product = async (req, res) => {
     try {
         const delete_product = await Produc.findByIdAndDelete(id);
         if (!delete_product) {
-            res.status(400).json({ status: 'No se ha podido eliminar el producto de aca.' });
+            res.status(400).json({ status: 'No se ha podido eliminar el producto.' });
             return
         }
         res.status(200).json({ status: 'El producto se elimino exitosamenete.' });
